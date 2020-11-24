@@ -1,5 +1,3 @@
 export default function input() {
-    return(
-        <div></div>
-    )
+   return <div></div>
 }

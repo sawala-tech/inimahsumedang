@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from '../../components/forms'
+import { DefaultButton } from '../../components/buttons'
 
 export default function navbar() {
    return (
-      <nav className="h-32 bg-white w-full border-b-2 border-gray-200">
-         <div className="w-4/5 mx-auto flex items-center justify-start h-full">
+      <nav className="flex items-center h-32 bg-white border-b-2 border-gray-200">
+         <div className="flex items-center justify-between w-4/5 mx-auto">
             <Image
                src="/img/logo_inimahsumedang_500x.png"
                height={45}
@@ -26,7 +27,12 @@ export default function navbar() {
                </ul>
             </div>
             <div className="mx-10">
-               <Search></Search>
+               <Search placeholder="Cari artikel"></Search>
+            </div>
+            <div className="ml-10">
+               <DefaultButton variant="primary" className="rounded-3xl hover:bg-blue-600">
+                  Masuk
+               </DefaultButton>
             </div>
          </div>
       </nav>

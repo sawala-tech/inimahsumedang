@@ -5,13 +5,13 @@ import Navbar from '../PageHeader/navbar.jsx'
 export default function DefaultNavbar({ children }) {
    return (
       <div>
-         <div className="w-screen h-24 flex">
+         <div className="flex w-screen h-24">
             <MainSidebar></MainSidebar>
             <SecondarySidebar></SecondarySidebar>
 
-            <div className="w-full flex flex-col h-screen">
+            <div className="flex flex-col w-full h-screen">
                <Navbar></Navbar>
-               <div className="h-full w-full flex flex-col">
+               <div className="flex flex-col w-full h-full">
                   <main>{children}</main>
                </div>
             </div>

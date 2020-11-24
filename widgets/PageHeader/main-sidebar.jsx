@@ -5,8 +5,8 @@ import Link from 'next/link'
 export default function MainSidebar() {
    return (
       <div>
-         <aside className="w-32 flex flex-col h-screen">
-            <div className="h-32 bg-indigo-800 w-full flex items-center justify-center text-white">
+         <aside className="flex flex-col w-32 h-screen">
+            <div className="flex items-center justify-center w-full h-32 text-white bg-indigo-800">
                <svg
                   className="w-10 h-10"
                   fill="none"
@@ -20,7 +20,7 @@ export default function MainSidebar() {
                      d="M4 6h16M4 12h16M4 18h7"></path>
                </svg>
             </div>
-            <div className="h-full w-full flex flex-col">
+            <div className="flex flex-col w-full h-full">
                <Link href="/articles">
                   <div className={`${SidebarCss.item} ${SidebarCss.active}`}>
                      <Image src="/img/icon_artikel.png" width={35} height={35}></Image>
