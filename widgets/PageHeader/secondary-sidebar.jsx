@@ -1,11 +1,15 @@
+import React from 'react'
 // import Image from 'next/image'
 import SidebarCss from '../../styles/modules/sidebar.module.scss'
 // import Link from 'next/link'
 
-export default function secondarySidebar() {
-   return (
-      <div>
-         <aside className="flex flex-col w-64 h-screen">
+class SecondarySidebar extends React.Component {
+   constructor(props) {
+      super(props)
+   }
+   render() {
+      return (
+         <aside className="relative flex flex-col w-64 h-screen" style={{ zIndex: '-100' }}>
             <div className="flex items-center w-full h-32 bg-gray-200">
                <h1 className="px-5 text-xl font-bold text-indigo-900">Events</h1>
             </div>
@@ -49,6 +53,8 @@ export default function secondarySidebar() {
                </div>
             </div>
          </aside>
-      </div>
-   )
+      )
+   }
 }
+
+export default SecondarySidebar
