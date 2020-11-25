@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "javascript.format.semicolons": "remove",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
