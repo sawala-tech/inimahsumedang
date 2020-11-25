@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from '../../components/forms'
 import { DefaultButton } from '../../components/buttons'
@@ -9,15 +9,15 @@ class Navbar extends React.Component {
       var resize = this.props.resize
       return (
          <nav
-            className="fixed z-20 flex items-center w-9/12 py-8 transition-all duration-300 bg-white border-b-2 border-gray-200"
-            style={{ left: resize ? '25%' : '8%', width: resize ? '75%' : '92%' }}>
+            className="fixed z-20 flex items-center w-9/12 transition-all duration-300 bg-white border-b-2 border-gray-200"
+            style={{
+               left: resize ? '25%' : '8%',
+               width: resize ? '75%' : '92%',
+               height: 'calc(7rem - 2px)'
+            }}>
             <div className="flex items-center justify-between w-4/5 mx-auto">
                <Link href="/">
-                  <Image
-                     src="/img/logo_inimahsumedang_500x.png"
-                     height={45}
-                     width={125}
-                     layout="fixed"></Image>
+                  <img src="/img/logo.png" width="100px" alt="inimahlogo" />
                </Link>
 
                <div className="mx-10">
