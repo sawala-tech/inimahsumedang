@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-@import "tailwindcss/base";
-=======
 @import 'tailwindcss/base';
->>>>>>> 31895ce1c23d172279b20310a68b27f964951018
 
 /* Write your own custom base styles here */
 
 /* Start purging... */
-<<<<<<< HEAD
-@import "tailwindcss/components";
-/* Stop purging. */
-
-/* Write your own custom component styles here */
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
-}
-
-/* Start purging... */
-@import "tailwindcss/utilities";
-=======
 @import 'tailwindcss/components';
 /* Stop purging. */
 
@@ -29,7 +13,6 @@ body {
 
 /* Start purging... */
 @import 'tailwindcss/utilities';
->>>>>>> 31895ce1c23d172279b20310a68b27f964951018
 /* Stop purging. */
 
 /* Your own custom utilities */
