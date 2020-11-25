@@ -6,8 +6,11 @@ import { DefaultButton } from '../../components/buttons'
 
 class Navbar extends React.Component {
    render() {
+      var resize = this.props.resize
       return (
-         <nav className="flex items-center h-32 bg-white border-b-2 border-gray-200">
+         <nav
+            className="fixed z-20 flex items-center w-9/12 py-8 transition-all duration-300 bg-white border-b-2 border-gray-200"
+            style={{ left: resize ? '25%' : '8%', width: resize ? '75%' : '92%' }}>
             <div className="flex items-center justify-between w-4/5 mx-auto">
                <Link href="/">
                   <Image
