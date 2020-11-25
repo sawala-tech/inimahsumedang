@@ -1,4 +1,7 @@
 import { DefaultButton, Dropdown, DropdownItem } from '../components/buttons'
+import { Masonry } from '../components/layouts'
+import { Card } from '../components/cards'
+
 export default function IndexPage() {
    return (
       <div className="w-4/5 mx-auto my-10">
@@ -35,6 +38,15 @@ export default function IndexPage() {
                   Tulis Artikel
                </DefaultButton>
             </div>
+         </div>
+         <div className="mt-10">
+            <Masonry>
+               {Array(9)
+                  .fill(1)
+                  .map((el, i) => (
+                     <Card imgSrc={`/img/demo/${i}.jpg`} key={i} />
+                  ))}
+            </Masonry>
          </div>
       </div>
    )
