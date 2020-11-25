@@ -9,11 +9,13 @@ class Navbar extends React.Component {
       return (
          <nav className="flex items-center h-32 bg-white border-b-2 border-gray-200">
             <div className="flex items-center justify-between w-4/5 mx-auto">
-               <Image
-                  src="/img/logo_inimahsumedang_500x.png"
-                  height={45}
-                  width={125}
-                  layout="fixed"></Image>
+               <Link href="/">
+                  <Image
+                     src="/img/logo_inimahsumedang_500x.png"
+                     height={45}
+                     width={125}
+                     layout="fixed"></Image>
+               </Link>
 
                <div className="mx-10">
                   <ul>

@@ -15,25 +15,25 @@ class MainSidebar extends React.Component {
                   {this.props.children}
                </div>
                <div className="z-40 flex flex-col w-full h-full bg-white">
-                  <Link href="/articles">
+                  <Link href="/artikel">
                      <div className={`${SidebarCss.item} ${SidebarCss.active} `}>
                         <Image src="/img/icon_artikel.png" width={35} height={35}></Image>
                         <span>Artikel</span>
                      </div>
                   </Link>
-                  <Link href="/articles">
+                  <Link href="/instagram">
                      <div className={`${SidebarCss.item} `}>
                         <Image src="/img/icon_instagram.png" width={35} height={35}></Image>
                         <span>Instagram</span>
                      </div>
                   </Link>
-                  <Link href="/articles">
+                  <Link href="/youtube">
                      <div className={`${SidebarCss.item} `}>
                         <Image src="/img/icon_youtube.png" width={35} height={35}></Image>
                         <span>Youtube</span>
                      </div>
                   </Link>
-                  <Link href="/articles">
+                  <Link href="/bisnis">
                      <div className={`${SidebarCss.item} `}>
                         <Image src="/img/icon_bisnis.png" width={35} height={35}></Image>
                         <span>Bisnis</span>
