@@ -73,8 +73,8 @@ class DefaultLayout extends React.Component {
                      }`}
                      style={{
                         marginTop: '7rem',
-                        marginLeft: this.state.active !== true ? '9%' : '',
-                        width: this.state.active !== true ? '91%' : ''
+                        marginLeft: this.state.active !== true ? '8%' : '',
+                        width: this.state.active !== true ? '92%' : ''
                      }}>
                      <main>{this.props.children}</main>
                   </div>
