@@ -8,7 +8,7 @@ class DefaultLayout extends React.Component {
    constructor(props) {
       super(props)
       this.state = {
-         active: true
+         active: false
       }
    }
    toggleState() {
@@ -24,7 +24,7 @@ class DefaultLayout extends React.Component {
                      {/* Button we needed to show and hide Secondary Sidebar */}
                      <svg
                         className={`w-10 h-10 cursor-pointer ${
-                           this.state.active !== true ? 'hidden' : ''
+                           this.state.active === true ? 'hidden' : ''
                         }`}
                         fill="none"
                         stroke="currentColor"
@@ -39,7 +39,7 @@ class DefaultLayout extends React.Component {
                      </svg>
                      <svg
                         className={`w-10 h-10 cursor-pointer ${
-                           this.state.active === true ? 'hidden' : ''
+                           this.state.active !== true ? 'hidden' : ''
                         }`}
                         fill="none"
                         stroke="currentColor"

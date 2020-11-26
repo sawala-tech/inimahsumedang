@@ -1,0 +1,37 @@
+$inimahFont: 'Comvortaa';
+$inimahFontLight: 'Comvortaa Light';
+$inimahFontBold: 'Comvortaa Bold';
+
+$bodyFont: 'Source Sans Pro';
+$bodyFontLight: 'Source Sans Pro Light';
+$bodyFontBold: 'Source Sans Pro Bold';
+
+@font-face {
+   font-family: $inimahFontLight;
+   src: url('./fonts/comfortaa/Comfortaa-Light.ttf') format('truetype');
+   font-weight: 300;
+}
+@font-face {
+   font-family: $inimahFont;
+   src: url('./fonts/comfortaa/Comfortaa-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: $inimahFontBold;
+   src: url('./fonts/comfortaa/Comfortaa-Bold.ttf') format('truetype');
+   // font-weight: bold;
+}
+
+@font-face {
+   font-family: $bodyFontLight;
+   src: url('./fonts/source-sans-pro/SourceSansPro-Light.ttf') format('truetype');
+   font-weight: 300;
+}
+@font-face {
+   font-family: $bodyFont;
+   src: url('./fonts/source-sans-pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: $bodyFontBold;
+   src: url('./fonts/source-sans-pro/SourceSansPro-Bold.ttf') format('truetype');
+   font-weight: bold;
+}

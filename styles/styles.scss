@@ -7,10 +7,24 @@
 /* Stop purging. */
 
 /* Write your own custom component styles here */
+@import './_typography.scss';
 body {
    overflow-x: hidden;
 }
-
+* {
+   font-family: $bodyFont;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: $inimahFont;
+}
+.space-between {
+   justify-content: space-between;
+}
 /* Start purging... */
 @import 'tailwindcss/utilities';
 /* Stop purging. */

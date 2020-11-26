@@ -3,13 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import { Search } from '../../components/forms'
 import { DefaultButton } from '../../components/buttons'
+import { LoginModal as Modal } from '../../components/popups'
 
 class Navbar extends React.Component {
    render() {
       var resize = this.props.resize
       return (
          <nav
-            className="fixed z-20 flex items-center w-9/12 transition-all duration-300 bg-white border-b-2 border-gray-200"
+            className="fixed z-50 flex items-center w-9/12 transition-all duration-300 bg-white border-b-2 border-gray-200"
             style={{
                left: resize ? '25%' : '8%',
                width: resize ? '75%' : '92%',
@@ -42,6 +43,8 @@ class Navbar extends React.Component {
                   </DefaultButton>
                </div>
             </div>
+            {/* Login Popups */}
+            <Modal></Modal>
          </nav>
       )
    }
