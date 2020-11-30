@@ -4,8 +4,19 @@ import Link from 'next/link'
 import { Search } from '../../components/forms'
 import { DefaultButton } from '../../components/buttons'
 import { LoginModal as Modal } from '../../components/popups'
+import { Transition } from '@headlessui/react'
 
 class Navbar extends React.Component {
+   constructor(props) {
+      super(props)
+      this.state = {
+         modal: false
+      }
+   }
+   toggleLoginModal() {
+      const currentModalState = this.state.modal
+      this.setState({ modal: !currentModalState })
+   }
    render() {
       var resize = this.props.resize
       return (
@@ -38,13 +49,25 @@ class Navbar extends React.Component {
                   <Search placeholder="Cari artikel"></Search>
                </div>
                <div className="ml-10">
-                  <DefaultButton variant="primary" className="rounded-3xl hover:bg-blue-600">
+                  <DefaultButton
+                     variant="primary"
+                     className="rounded-3xl hover:bg-blue-600"
+                     onClick={() => this.toggleLoginModal()}>
                      Masuk
                   </DefaultButton>
                </div>
             </div>
             {/* Login Popups */}
-            <Modal></Modal>
+            <Transition
+               show={this.state.modal}
+               enter="ease-out duration-300"
+               enterFrom="opacity-0"
+               enterTo="opacity-100"
+               leave="ease-in duration-200"
+               leaveFrom="opacity-100"
+               leaveTo="opacity-0">
+               <Modal close={() => this.toggleLoginModal()}></Modal>
+            </Transition>
          </nav>
       )
    }

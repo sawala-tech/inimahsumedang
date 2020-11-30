@@ -18,7 +18,8 @@ class defaultButton extends React.Component {
       const variant = this.checkVariant(this.props.variant)
       return (
          <button
-            className={`px-5 py-1 transition-all duration-200 rounded-3xl ${variant.classes} ${this.props.className}`}>
+            className={`px-5 py-1 transition-all duration-200 rounded-3xl ${variant.classes} ${this.props.className}`}
+            onClick={this.props.onClick}>
             {this.props.children}
          </button>
       )
