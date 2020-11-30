@@ -23,9 +23,9 @@ class Navbar extends React.Component {
          <nav
             className="fixed z-50 flex items-center w-9/12 transition-all duration-300 bg-white border-b-2 border-gray-200"
             style={{
-               left: resize ? '25%' : '8%',
-               width: resize ? '75%' : '92%',
-               height: 'calc(7rem - 2px)'
+               left: resize ? 'calc(27% - 5px)' : '9%',
+               width: resize ? '73%' : '91%',
+               height: 'calc(7rem - 3px)'
             }}>
             <div className="flex items-center justify-between w-4/5 mx-auto">
                <Link href="/">

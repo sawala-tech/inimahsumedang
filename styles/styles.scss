@@ -10,6 +10,7 @@
 @import './_typography.scss';
 body {
    overflow-x: hidden;
+   @apply bg-white;
 }
 * {
    font-family: $bodyFont;

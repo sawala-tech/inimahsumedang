@@ -9,7 +9,7 @@ class SecondarySidebar extends React.Component {
    }
    render() {
       return (
-         <aside className="relative flex flex-col w-64 h-screen" style={{ zIndex: '-100' }}>
+         <aside className="relative z-50 flex flex-col w-64 h-screen">
             <div className="flex items-center w-full h-32 bg-gray-200">
                <h1 className="px-5 text-xl font-bold text-indigo-900">Events</h1>
             </div>
