@@ -7,10 +7,17 @@ export default function DefaultCard(props) {
    const fillLove = () => {
       setFilled(!filled)
    }
+
+   const { author, thumbnail, title, date } = props
+   let { categories = { name: '' } } = props
+   categories = categories.map((val) => {
+      return val.name
+   })
+   // check if image is loaded from internal or from backend
    return (
       <div className={`w-full rounded-lg ${CardStyle.defaultCard}`}>
          <Image
-            src={props.imgSrc}
+            src={thumbnail}
             layout="responsive"
             width="100%"
             height="100%"
@@ -18,10 +25,8 @@ export default function DefaultCard(props) {
             objectFit="cover"></Image>
          <div className={CardStyle.cardWrapper}>
             <div className={CardStyle.cardContent}>
-               <span className={CardStyle.category}>Berita</span>
-               <h1 className={CardStyle.title}>
-                  Inilah Penampakan Desain Terbaru Gapura Selamat Datang
-               </h1>
+               <span className={CardStyle.category}>{categories.join(', ')}</span>
+               <h1 className={CardStyle.title}>{title}</h1>
                <div className={CardStyle.footer}>
                   <div className="flex items-center ">
                      <img
@@ -29,11 +34,22 @@ export default function DefaultCard(props) {
                         layout="responsive"
                         width="100%"
                         height="100%"
-                        src="https://tailwindcss.com/img/jonathan.jpg"
-                        alt="Avatar of Jonathan Reinink"></img>
+                        src={
+                           author.avatar?.url ||
+                           'https://ui-avatars.com/api/?background=random&name=' +
+                              author.username.replaceAll(' ', '-')
+                        }
+                        alt={author.username}></img>
                      <div className={CardStyle.author}>
-                        <p className="font-semibold leading-none text-white">Jonathan Reinink</p>
-                        <p className="font-light text-white">Aug 18</p>
+                        <p className="font-semibold leading-none text-white">{author.username}</p>
+                        <p className="text-sm font-light text-gray-300">
+                           {new Date(date).toLocaleDateString('id-ID', {
+                              weekday: 'long',
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
+                           })}
+                        </p>
                      </div>
                   </div>
                   <div className="flex">

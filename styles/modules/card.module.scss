@@ -23,12 +23,12 @@
    }
    .cardWrapper {
       .cardContent {
-         @apply absolute bottom-0 px-5 pb-5 pt-10 text-white transition-all duration-200 bg-gradient-to-t from-black via-black to-transparent rounded-lg;
+         @apply absolute bottom-0 px-5 pb-5 pt-10 text-white transition-all duration-200 bg-gradient-to-t from-black via-black to-transparent rounded-lg w-full;
          .category {
             @apply text-sm uppercase font-light;
          }
          .title {
-            @apply font-bold my-2;
+            @apply font-bold my-2 text-white;
             font-size: 1.5em;
             // letter-spacing: -1px;
          }

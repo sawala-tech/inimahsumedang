@@ -1,6 +1,8 @@
 import { DefaultButton, Dropdown, DropdownItem } from '../components/buttons'
 import { Masonry } from '../components/layouts'
 import { Card } from '../components/cards'
+import Query from '../components/query'
+import ARTICLES_QUERY from '../queries/articles/articles'
 
 export default function IndexPage() {
    return (
@@ -40,13 +42,24 @@ export default function IndexPage() {
             </div>
          </div>
          <div className="mt-10">
-            <Masonry>
-               {Array(9)
-                  .fill(1)
-                  .map((el, i) => (
-                     <Card imgSrc={`/img/demo/${i}.jpg`} key={i} />
-                  ))}
-            </Masonry>
+            <Query query={ARTICLES_QUERY}>
+               {({ data: { articles } }) => {
+                  return articles.map(function (article, i) {
+                     return (
+                        <Masonry key={i}>
+                           <Card
+                              thumbnail={article.thumbnail.url}
+                              title={article.title}
+                              categories={article.categories}
+                              date={article.createdAt}
+                              author={article.author}
+                              localImage={false}
+                           />
+                        </Masonry>
+                     )
+                  })
+               }}
+            </Query>
          </div>
       </div>
    )
