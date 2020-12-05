@@ -1,28 +1,25 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import CardStyle from '../../styles/modules/card.module.scss'
 import { useState } from 'react'
 
-export default function DefaultCard(props) {
+const DefaultCard = ({ author, thumbnail, title, date, categories = { name: '' } }) => {
    const [filled, setFilled] = useState(false)
    const fillLove = () => {
       setFilled(!filled)
    }
-
-   const { author, thumbnail, title, date } = props
-   let { categories = { name: '' } } = props
    categories = categories.map((val) => {
       return val.name
    })
    // check if image is loaded from internal or from backend
    return (
       <div className={`w-full rounded-lg ${CardStyle.defaultCard}`}>
-         <Image
+         <img
             src={thumbnail}
-            layout="responsive"
             width="100%"
             height="100%"
-            className={`rounded-lg ${CardStyle.thumbnail}`}
-            objectFit="cover"></Image>
+            className={`rounded-lg object-cover h-full ${CardStyle.thumbnail}`}
+            alt={title}
+         />
          <div className={CardStyle.cardWrapper}>
             <div className={CardStyle.cardContent}>
                <span className={CardStyle.category}>{categories.join(', ')}</span>
@@ -37,7 +34,7 @@ export default function DefaultCard(props) {
                         src={
                            author.avatar?.url ||
                            'https://ui-avatars.com/api/?background=random&name=' +
-                              author.username.replaceAll(' ', '-')
+                              author.username.split(' ').join('-')
                         }
                         alt={author.username}></img>
                      <div className={CardStyle.author}>
@@ -89,3 +86,13 @@ export default function DefaultCard(props) {
       </div>
    )
 }
+
+export const getStaticProps = async () => {
+   return {
+      props: {
+         date: '2020-12-01T07:34:42.256Z"'
+      }
+   }
+}
+
+export default DefaultCard

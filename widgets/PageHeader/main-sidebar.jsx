@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import SidebarCss from '../../styles/modules/sidebar.module.scss'
 import Link from 'next/link'
 
@@ -17,25 +17,41 @@ class MainSidebar extends React.Component {
                <div className="z-40 flex flex-col w-full h-full bg-white">
                   <Link href="/artikel">
                      <div className={`${SidebarCss.item} ${SidebarCss.active} `}>
-                        <Image src="/img/icon_artikel.png" width={35} height={35}></Image>
+                        <img
+                           src={require('../../public/img/icon_artikel.png')}
+                           width={35}
+                           height={35}
+                           alt=""></img>
                         <span>Artikel</span>
                      </div>
                   </Link>
                   <Link href="/instagram">
                      <div className={`${SidebarCss.item} `}>
-                        <Image src="/img/icon_instagram.png" width={35} height={35}></Image>
+                        <img
+                           src={require('../../public/img/icon_instagram.png')}
+                           width={35}
+                           height={35}
+                           alt=""></img>
                         <span>Instagram</span>
                      </div>
                   </Link>
                   <Link href="/youtube">
                      <div className={`${SidebarCss.item} `}>
-                        <Image src="/img/icon_youtube.png" width={35} height={35}></Image>
+                        <img
+                           src={require('../../public/img/icon_youtube.png')}
+                           width={35}
+                           height={35}
+                           alt=""></img>
                         <span>Youtube</span>
                      </div>
                   </Link>
                   <Link href="/bisnis">
                      <div className={`${SidebarCss.item} `}>
-                        <Image src="/img/icon_bisnis.png" width={35} height={35}></Image>
+                        <img
+                           src={require('../../public//img/icon_bisnis.png')}
+                           width={35}
+                           height={35}
+                           alt=""></img>
                         <span>Bisnis</span>
                      </div>
                   </Link>

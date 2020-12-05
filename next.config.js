@@ -1,10 +1,14 @@
 const path = require('path')
 
-module.exports = {
+const withOptimizedImages = require('next-optimized-images')
+
+module.exports = withOptimizedImages({
+   /* config for next-optimized-images */
+
    images: {
       domains: ['inimahsumedang.s3.ap-southeast-1.amazonaws.com']
    },
    sassOptions: {
       includePaths: [path.join(__dirname, 'styles')]
    }
-}
+})

@@ -1,10 +1,11 @@
 import { DefaultButton, Dropdown, DropdownItem } from '../components/buttons'
 import { Masonry } from '../components/layouts'
 import { Card } from '../components/cards'
-import Query from '../components/query'
+// import Query from '../components/query'
 import ARTICLES_QUERY from '../queries/articles/articles'
+import apolloClient from '../utils/apollo'
 
-export default function IndexPage() {
+export default function IndexPage({ articles }) {
    return (
       <div className="w-4/5 mx-auto my-10">
          <div className="flex items-center justify-between">
@@ -42,25 +43,33 @@ export default function IndexPage() {
             </div>
          </div>
          <div className="mt-10">
-            <Query query={ARTICLES_QUERY}>
-               {({ data: { articles } }) => {
-                  return articles.map(function (article, i) {
-                     return (
-                        <Masonry key={i}>
-                           <Card
-                              thumbnail={article.thumbnail.url}
-                              title={article.title}
-                              categories={article.categories}
-                              date={article.createdAt}
-                              author={article.author}
-                              localImage={false}
-                           />
-                        </Masonry>
-                     )
-                  })
-               }}
-            </Query>
+            {articles.map(function (article, i) {
+               return (
+                  <Masonry key={i}>
+                     <Card
+                        thumbnail={article.thumbnail.url}
+                        title={article.title}
+                        categories={article.categories}
+                        date={article.createdAt}
+                        author={article.author}
+                        localImage={false}
+                     />
+                  </Masonry>
+               )
+            })}
          </div>
       </div>
    )
+}
+
+export const getStaticProps = async () => {
+   const { data } = await apolloClient.query({
+      query: ARTICLES_QUERY
+   })
+
+   return {
+      props: {
+         articles: data.articles
+      }
+   }
 }
