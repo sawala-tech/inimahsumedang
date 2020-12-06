@@ -1,0 +1,63 @@
+.instagramCard {
+   @apply w-full relative cursor-pointer overflow-hidden max-h-full;
+   &:hover {
+      .filter {
+         &::after {
+            background: rgba(0, 70, 150, 0.25);
+            mix-blend-mode: lighten;
+            z-index: 3;
+         }
+         .thumbnail {
+            transform: scale(1.1);
+         }
+      }
+      > .cardWrapper .cardContent {
+         @apply opacity-100;
+         padding-bottom: 4rem;
+         .footer {
+            bottom: 1rem;
+         }
+      }
+      > .cardWrapper .cardFooter {
+         @apply opacity-100;
+      }
+      .socialShare {
+         display: block;
+      }
+   }
+   .filter {
+      &::after,
+      &::before {
+         content: '';
+         display: block;
+         height: 100%;
+         width: 100%;
+         top: 0;
+         left: 0;
+         position: absolute;
+         pointer-events: none;
+      }
+      &::before {
+         z-index: 2;
+      }
+      .thumbnail {
+         @apply w-full object-cover transition-all duration-300;
+         height: 25rem;
+         transition: 0.25s;
+         transition-timing-function: ease;
+      }
+   }
+
+   .cardWrapper {
+      .cardContent {
+         @apply absolute flex left-0 opacity-0 px-5 pb-5 pt-10 text-white transition-all duration-200 w-full;
+         top: 50%;
+         transform: translate(0, -50%);
+      }
+      .cardFooter {
+         @apply absolute opacity-0;
+         bottom: 0.5rem;
+         left: 0.5rem;
+      }
+   }
+}

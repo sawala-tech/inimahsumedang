@@ -1,18 +1,23 @@
 .item {
-    @apply w-full h-32 border-l-8 border-transparent transition-all duration-200 flex items-center justify-center flex-col cursor-pointer;
-    &:hover, &.active {
-        @apply border-indigo-900;
-    }
+   @apply w-full h-32 border-l-8 border-transparent transition-all duration-200 flex items-center justify-center flex-col cursor-pointer;
+   &:hover,
+   &.active,
+   &:active,
+   &:visited,
+   &:focus,
+   &:link {
+      @apply border-indigo-900;
+   }
 }
 .eventItem {
-    @apply w-full h-32 border-l-8 border-transparent transition-all duration-200 flex px-3 justify-center flex-col cursor-pointer;
-    &:nth-child(odd) {
-        @apply bg-gray-100;
-    }
-    &:nth-child(even) {
-        @apply bg-gray-200;
-    }
-    &:last-child {
-        @apply flex-1;
-    }
+   @apply w-full h-32 border-l-8 border-transparent transition-all duration-200 flex px-3 justify-center flex-col cursor-pointer;
+   &:nth-child(odd) {
+      @apply bg-gray-100;
+   }
+   &:nth-child(even) {
+      @apply bg-gray-200;
+   }
+   &:last-child {
+      @apply flex-1;
+   }
 }

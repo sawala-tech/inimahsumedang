@@ -2,6 +2,7 @@
    @apply w-full relative rounded-lg cursor-pointer overflow-hidden max-h-full;
    &:hover {
       .thumbnail {
+         @apply rounded-lg;
          transform: scale(1.1);
          filter: brightness(50%);
       }
@@ -17,9 +18,7 @@
       }
    }
    .thumbnail {
-      @apply w-full object-cover transition-all duration-300 rounded-lg;
-      transition: 0.25s;
-      transition-timing-function: ease;
+      @apply w-full object-cover transition-all duration-200 rounded-lg;
    }
    .cardWrapper {
       .cardContent {

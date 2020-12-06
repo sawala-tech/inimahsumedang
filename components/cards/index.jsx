@@ -1,3 +1,3 @@
 import Card from './default-card'
-
-export { Card }
+import InstagramCard from './instagram-card'
+export { Card, InstagramCard }

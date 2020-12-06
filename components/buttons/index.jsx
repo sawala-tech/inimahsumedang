@@ -1,4 +1,4 @@
 import DefaultButton from './default-button'
 import { Dropdown, DropdownItem } from './dropdown'
-
-export { DefaultButton, Dropdown, DropdownItem }
+import BaseLink from './link'
+export { BaseLink as Link, DefaultButton, Dropdown, DropdownItem }

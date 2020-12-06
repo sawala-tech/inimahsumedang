@@ -87,12 +87,4 @@ const DefaultCard = ({ author, thumbnail, title, date, categories = { name: '' }
    )
 }
 
-export const getStaticProps = async () => {
-   return {
-      props: {
-         date: '2020-12-01T07:34:42.256Z"'
-      }
-   }
-}
-
 export default DefaultCard

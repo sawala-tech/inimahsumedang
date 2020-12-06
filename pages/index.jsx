@@ -2,7 +2,7 @@ import { DefaultButton, Dropdown, DropdownItem } from '../components/buttons'
 import { Masonry } from '../components/layouts'
 import { Card } from '../components/cards'
 // import Query from '../components/query'
-import ARTICLES_QUERY from '../queries/articles/articles'
+import ARTICLES_QUERY from '../queries/articles'
 import apolloClient from '../utils/apollo'
 
 export default function IndexPage({ articles }) {
@@ -43,10 +43,11 @@ export default function IndexPage({ articles }) {
             </div>
          </div>
          <div className="mt-10">
-            {articles.map(function (article, i) {
-               return (
-                  <Masonry key={i}>
+            <Masonry>
+               {articles.map(function (article, i) {
+                  return (
                      <Card
+                        key={i}
                         thumbnail={article.thumbnail.url}
                         title={article.title}
                         categories={article.categories}
@@ -54,9 +55,9 @@ export default function IndexPage({ articles }) {
                         author={article.author}
                         localImage={false}
                      />
-                  </Masonry>
-               )
-            })}
+                  )
+               })}
+            </Masonry>
          </div>
       </div>
    )
