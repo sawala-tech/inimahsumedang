@@ -1,8 +1,9 @@
 // import Image from 'next/image'
 import CardStyle from '../../styles/modules/card.module.scss'
 import { useState } from 'react'
+import Router from 'next/router'
 
-const DefaultCard = ({ author, thumbnail, title, date, categories = { name: '' } }) => {
+const DefaultCard = ({ id, author, thumbnail, title, date, categories = { name: '' } }) => {
    const [filled, setFilled] = useState(false)
    const fillLove = () => {
       setFilled(!filled)
@@ -10,6 +11,9 @@ const DefaultCard = ({ author, thumbnail, title, date, categories = { name: '' }
    categories = categories.map((val) => {
       return val.name
    })
+   const openSingle = (id) => {
+      Router.push('artikel/' + id)
+   }
    // check if image is loaded from internal or from backend
    return (
       <div className={`w-full rounded-lg ${CardStyle.defaultCard}`}>
@@ -23,7 +27,11 @@ const DefaultCard = ({ author, thumbnail, title, date, categories = { name: '' }
          <div className={CardStyle.cardWrapper}>
             <div className={CardStyle.cardContent}>
                <span className={CardStyle.category}>{categories.join(', ')}</span>
-               <h1 className={CardStyle.title}>{title}</h1>
+               <button
+                  className={`block text-left font-lotaBold ${CardStyle.title}`}
+                  onClick={() => openSingle(id)}>
+                  {title}
+               </button>
                <div className={CardStyle.footer}>
                   <div className="flex items-center ">
                      <img

@@ -6,6 +6,10 @@ $bodyFont: 'Source Sans Pro';
 $bodyFontLight: 'Source Sans Pro Light';
 $bodyFontBold: 'Source Sans Pro Bold';
 
+$lotaBlack: 'Lota Grotesque Black';
+$lotaBold: 'Lota Grotesque Bold';
+$lotaSemiBold: 'Lota Grotesque Semi Bold';
+
 @font-face {
    font-family: $inimahFontLight;
    src: url('./fonts/comfortaa/Comfortaa-Light.ttf') format('truetype');
@@ -19,6 +23,26 @@ $bodyFontBold: 'Source Sans Pro Bold';
    font-family: $inimahFontBold;
    src: url('./fonts/comfortaa/Comfortaa-Bold.ttf') format('truetype');
    // font-weight: bold;
+}
+
+@font-face {
+   font-family: $lotaSemiBold;
+   font-style: normal;
+   font-weight: normal;
+   src: url('./fonts/lota/lota-semibold.woff') format('woff');
+}
+
+@font-face {
+   font-family: $lotaBold;
+   font-style: normal;
+   font-weight: normal;
+   src: url('./fonts/lota/lota-bold.woff') format('woff');
+}
+@font-face {
+   font-family: $lotaBlack;
+   font-style: normal;
+   font-weight: normal;
+   src: url('./fonts/lota/lota-black.woff') format('woff');
 }
 
 @font-face {

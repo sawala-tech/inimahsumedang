@@ -9,7 +9,7 @@ export default function IndexPage({ articles }) {
    return (
       <div className="w-4/5 mx-auto my-10">
          <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-semibold">Artikel</h1>
+            <h1 className="text-3xl">Artikel</h1>
             <div className="flex items-center">
                <Dropdown>
                   <div>
@@ -48,6 +48,7 @@ export default function IndexPage({ articles }) {
                   return (
                      <Card
                         key={i}
+                        id={article.id}
                         thumbnail={article.thumbnail.url}
                         title={article.title}
                         categories={article.categories}

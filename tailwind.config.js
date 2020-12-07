@@ -15,7 +15,10 @@ module.exports = {
          },
          fontFamily: {
             comvortaa: ['Comvortaa', 'sans-serif'],
-            comvortaaBold: ['Comvortaa Bold', 'serif']
+            comvortaaBold: ['Comvortaa Bold', 'serif'],
+            lotaSemiBold: ['Lota Grotesque Semi Bold', 'sans-serif'],
+            lotaBold: ['Lota Grotesque Bold', 'sans-serif'],
+            lotaBlack: ['Lota Grotesque Black', 'sans-serif']
          }
       }
    },

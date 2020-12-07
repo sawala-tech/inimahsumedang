@@ -4,7 +4,7 @@ const YoutubeCard = (props) => {
    return (
       <figure className={css.YoutubeCard}>
          <img src={props.thumbnail} alt="" className="rounded-xl" />
-         <figcaption className="mt-3 mb-0 font-black tracking-tight text-indigo-900 font-comvortaaBold">
+         <figcaption className="mt-3 mb-0 font-black text-indigo-900 font-lotaBold">
             {props.title}
          </figcaption>
          <p className="text-sm text-gray-700">{props.date}</p>

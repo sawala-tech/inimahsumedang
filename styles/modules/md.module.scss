@@ -1,0 +1,14 @@
+.markdown {
+   strong {
+      @apply bg-gray-300;
+   }
+   a {
+      @apply text-gray-700 px-1;
+      &::after {
+         content: url('../../public/img/share.svg');
+      }
+   }
+   blockquote {
+      @apply p-5 text-2xl border-l-4 border-gray-400 my-3;
+   }
+}

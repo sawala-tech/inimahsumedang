@@ -6,7 +6,7 @@ export default function articles({ posts }) {
    return (
       <div className="w-4/5 mx-auto my-10">
          <div className="flex items-center justify-between">
-            <h1 className="ml-2 text-3xl font-semibold">Instagram</h1>
+            <h1 className="ml-2 text-3xl">Instagram</h1>
          </div>
          <div className="mt-10">
             <div className="flex flex-wrap">

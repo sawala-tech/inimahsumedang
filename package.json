@@ -27,7 +27,9 @@
       "nextjs-redirect": "^5.0.0",
       "node-sass": "^5.0.0",
       "react": "^16.13.1",
-      "react-dom": "^16.13.1"
+      "react-dom": "^16.13.1",
+      "react-markdown": "^5.0.3",
+      "remark-gfm": "^1.0.0"
    },
    "devDependencies": {
       "@headlessui/react": "^0.2.0",
