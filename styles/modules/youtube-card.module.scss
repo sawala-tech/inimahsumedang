@@ -1,0 +1,28 @@
+.YoutubeCard {
+   img {
+      @apply w-full;
+      filter: contrast(0.75) saturate(0.85) brightness(0.75);
+   }
+   &::before {
+      background: rgba(240, 149, 128, 0.2);
+      mix-blend-mode: soft-light;
+   }
+   &::before,
+   &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+   }
+
+   svg {
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%);
+   }
+}

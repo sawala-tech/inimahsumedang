@@ -1,3 +1,3 @@
 import LoginModal from './login-modal'
-
-export { LoginModal }
+import YoutubeModal from './youtube-modal'
+export { LoginModal, YoutubeModal }

@@ -12,6 +12,10 @@ module.exports = {
       extend: {
          colors: {
             'accent-1': '#333'
+         },
+         fontFamily: {
+            comvortaa: ['Comvortaa', 'sans-serif'],
+            comvortaaBold: ['Comvortaa Bold', 'serif']
          }
       }
    },
