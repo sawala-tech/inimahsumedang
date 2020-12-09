@@ -3,6 +3,8 @@ import MainSidebar from '../PageHeader/main-sidebar.jsx'
 import SecondarySidebar from '../PageHeader/secondary-sidebar.jsx'
 import Navbar from '../PageHeader/navbar.jsx'
 import { Transition } from '@headlessui/react'
+// import EVENT_QUERY from '../queries/event'
+// import apolloClient from '../utils/apollo'
 
 class DefaultLayout extends React.Component {
    constructor(props) {

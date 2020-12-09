@@ -7,6 +7,9 @@ class defaultButton extends React.Component {
          primary: {
             classes: 'bg-blue-700 text-white font-semibold'
          },
+         danger: {
+            classes: 'bg-red-600 text-white font-semibold'
+         },
          default: {
             classes: 'bg-gray-200'
          }

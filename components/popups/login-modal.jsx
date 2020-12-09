@@ -1,4 +1,12 @@
+// import auth0 from '../../utils/auth0'
+// import { useRouter } from 'next/router'
+
+// import { useAuth } from 'use-auth0-hooks'
+
 export default function LoginModal(props) {
+   // const { pathname, query } = useRouter()
+   // const { isAuthenticated, accessToken, login, logout } = useAuth()
+   // console.log(accessToken)
    return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
          <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
