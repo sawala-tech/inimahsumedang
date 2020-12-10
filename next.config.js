@@ -4,7 +4,7 @@ const withOptimizedImages = require('next-optimized-images')
 
 module.exports = withOptimizedImages({
    env: {
-      API_URL: 'https://ims.ieu.shi'
+      API_URL: 'https://ims.ieu.sh'
    },
    /* config for next-optimized-images */
    images: {
