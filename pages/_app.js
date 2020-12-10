@@ -4,21 +4,14 @@ import React from 'react'
 import '../styles/styles.scss'
 import Layout from '../widgets/layouts/default'
 import { Auth0Provider } from 'use-auth0-hooks'
-import { useRouter } from 'next/router'
+import { useRouter, withRouter } from 'next/router'
 import App from 'next/app'
 
 /**
  * Where to send the user after they have signed in.
  */
 // const onRedirectCallback = (appState) => {
-// console.log(appState)
-// const Router = useRouter()
-// if (appState && appState.returnTo) {
-//    Router.push({
-//       pathname: appState.returnTo.pathname,
-//       query: appState.returnTo.query
-//    })
-// }
+
 // }
 
 /**
@@ -64,7 +57,7 @@ const onRedirecting = () => {
 /**
  * Create a page which wraps the Auth0 provider.
  */
-export default class Root extends App {
+class Root extends App {
    render() {
       const { Component, pageProps } = this.props
 
@@ -83,3 +76,4 @@ export default class Root extends App {
       )
    }
 }
+export default withRouter(Root)

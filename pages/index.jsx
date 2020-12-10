@@ -1,24 +1,16 @@
-import { DefaultButton, Dropdown, DropdownItem } from '../components/buttons'
+// import { Dropdown, DropdownItem } from '../components/buttons'
 import { Masonry } from '../components/layouts'
 import { Card } from '../components/cards'
-// import Query from '../components/query'
 import ARTICLES_QUERY from '../queries/articles'
 import apolloClient from '../utils/apollo'
-import { useRouter } from 'next/router'
 
 export default function IndexPage({ articles }) {
-   const Router = useRouter()
-   const href = (url) => {
-      Router.push({
-         pathname: url
-      })
-   }
    return (
       <div className="w-4/5 mx-auto my-10">
          <div className="flex items-center justify-between">
             <h1 className="text-3xl">Artikel</h1>
             <div className="flex items-center">
-               <Dropdown>
+               {/* <Dropdown>
                   <div>
                      <span className="font-semibold cursor-pointer select-none">
                         Sortir
@@ -43,13 +35,13 @@ export default function IndexPage({ articles }) {
                      <DropdownItem>Tanggal (Terbaru)</DropdownItem>
                      <DropdownItem>Tanggal (Terdahulu)</DropdownItem>
                   </div>
-               </Dropdown>
-               <DefaultButton
+               </Dropdown> */}
+               {/* <DefaultButton
                   variant="primary"
                   onClick={() => href('artikel/create')}
                   className="ml-10">
                   Tulis Artikel
-               </DefaultButton>
+               </DefaultButton> */}
             </div>
          </div>
          <div className="mt-10">

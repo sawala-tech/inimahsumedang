@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 // import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from '../../components/forms'
-import { DefaultButton } from '../../components/buttons'
+// import { DefaultButton } from '../../components/buttons'
 import { LoginModal as Modal } from '../../components/popups'
 import { Transition } from '@headlessui/react'
-import { useRouter } from 'next/router'
-import { useAuth } from 'use-auth0-hooks'
+// import { useRouter } from 'next/router'
+// import { useAuth } from 'use-auth0-hooks'
 
 const Navbar = (props) => {
    const [state, setState] = useState(false)
@@ -14,8 +14,8 @@ const Navbar = (props) => {
       setState(!state)
    }
    const resize = props.resize
-   const { pathname, query } = useRouter()
-   const { isAuthenticated, isLoading, login, logout } = useAuth()
+   // const { pathname, query } = useRouter()
+   // const { isAuthenticated, isLoading, login, logout } = useAuth()
    // console.log(isAuthenticated)
    return (
       <nav
@@ -43,10 +43,10 @@ const Navbar = (props) => {
                   </li>
                </ul>
             </div>
-            <div className="mx-10">
+            <div className="ml-10">
                <Search placeholder="Cari artikel"></Search>
             </div>
-            <div className="ml-10">
+            {/* <div className="ml-10">
                {!isLoading &&
                   (isAuthenticated ? (
                      <button
@@ -75,7 +75,7 @@ const Navbar = (props) => {
                         Masuk
                      </DefaultButton>
                   ))}
-            </div>
+            </div> */}
          </div>
          {/* Login Popups */}
          <Transition
