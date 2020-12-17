@@ -41,17 +41,15 @@ class Dropdown extends React.Component {
    }
 }
 
-class DropdownItem extends React.Component {
-   render() {
-      return (
-         <a
-            href="#!"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            role="menuitem">
-            {this.props.children}
-         </a>
-      )
-   }
+const DropdownItem = (props) => {
+   return (
+      <button
+         onClick={props.onClick}
+         className={`flex items-center px-4 w-full py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 ${props.className}`}
+         role="menuitem">
+         {props.children}
+      </button>
+   )
 }
 
 Dropdown.propTypes = {

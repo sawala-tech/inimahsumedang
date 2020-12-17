@@ -40,13 +40,13 @@ const DefaultCard = ({ id, author, thumbnail, title, date, categories = { name: 
                         width="100%"
                         height="100%"
                         src={
-                           author.avatar?.url ||
+                           author?.avatar?.url ||
                            'https://ui-avatars.com/api/?background=random&name=' +
-                              author.username.split(' ').join('-')
+                              author?.username.split(' ').join('-')
                         }
-                        alt={author.username}></img>
+                        alt={author?.username}></img>
                      <div className={CardStyle.author}>
-                        <p className="font-semibold leading-none text-white">{author.username}</p>
+                        <p className="font-semibold leading-none text-white">{author?.username}</p>
                         <p className="text-sm font-light text-gray-300">
                            {new Date(date).toLocaleDateString('id-ID', {
                               weekday: 'long',

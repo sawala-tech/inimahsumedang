@@ -21,7 +21,7 @@ class DefaultLayout extends React.Component {
       return (
          <div>
             <div className="flex w-screen h-24">
-               <div className="fixed top-0 left-0 z-30 flex w-1/4">
+               <div className="fixed top-0 left-0 z-30 flex">
                   <MainSidebar className={this.state.active !== true ? 'shadow-lg' : ''}>
                      {/* Button we needed to show and hide Secondary Sidebar */}
                      <svg

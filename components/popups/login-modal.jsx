@@ -1,12 +1,6 @@
-// import auth0 from '../../utils/auth0'
-// import { useRouter } from 'next/router'
-
-// import { useAuth } from 'use-auth0-hooks'
+import { login } from '../../utils/strapi-auth'
 
 export default function LoginModal(props) {
-   // const { pathname, query } = useRouter()
-   // const { isAuthenticated, accessToken, login, logout } = useAuth()
-   // console.log(accessToken)
    return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
          <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
@@ -43,7 +37,7 @@ export default function LoginModal(props) {
                                  />
                               </svg>
                            </div>
-                           <div>
+                           <div style={{ marginTop: '0' }}>
                               <img
                                  className="w-auto h-12 mx-auto"
                                  src="/img/logo.png"
@@ -54,7 +48,9 @@ export default function LoginModal(props) {
                                  Masuk Menggunakan
                               </span>
                               <div className="flex mt-3">
-                                 <button className="w-full py-1 mr-5 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
+                                 <button
+                                    onClick={() => login('facebook')}
+                                    className="w-full py-1 mr-5 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
                                     <svg
                                        xmlns="http://www.w3.org/2000/svg"
                                        stroke="currentColor"
@@ -63,7 +59,9 @@ export default function LoginModal(props) {
                                        <path d="m512 256c0-141.4-114.6-256-256-256s-256 114.6-256 256 114.6 256 256 256c1.5 0 3 0 4.5-.1v-199.2h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5c107-30.7 185.3-129.2 185.3-246.1z" />
                                     </svg>
                                  </button>
-                                 <button className="w-full py-1 mr-5 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
+                                 <button
+                                    onClick={() => login('twitter')}
+                                    className="hidden w-full py-1 mr-5 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
                                     <svg
                                        xmlns="http://www.w3.org/2000/svg"
                                        stroke="currentColor"
@@ -76,7 +74,9 @@ export default function LoginModal(props) {
                                        </g>
                                     </svg>
                                  </button>
-                                 <button className="w-full py-1 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
+                                 <button
+                                    onClick={() => login('google')}
+                                    className="w-full py-1 border-2 border-gray-500 rounded-lg opacity-50 hover:opacity-100">
                                     <svg
                                        xmlns="http://www.w3.org/2000/svg"
                                        id="Bold"
